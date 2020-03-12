@@ -44,7 +44,13 @@
     <button id="show-bar">Show bar</button>
 </main>
 <script>
-    let bar = new Bar();
+    let bar = new Bar({
+        position: 'bottom',
+        message: 'Add beautiful widgets to your website',
+        action: () => {
+            alert('Action! Ok?');
+        }
+    });
     document.getElementById('show-bar').addEventListener('click', () => {
         bar.show();
     });
